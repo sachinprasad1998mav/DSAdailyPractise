@@ -28,3 +28,22 @@
 #     It is guaranteed that the answer is unique.
 
 
+class Solution:
+    def topKFrequent(self, nums, k):
+        d = {}
+        for i in nums:
+            if i not in d:
+                d[i] = 1
+            else:
+                d[i] += 1
+
+        freq = [[] for i in range(len(nums)+1)]
+        for key, value in d.items():
+            freq[value].append(key)
+
+        res = []
+        for i in range(len(freq)-1, -1, -1):
+            for j in sorted(freq[i]):  # Sort the elements at each frequency level
+                res.append(j)
+                if len(res) == k:
+                    return res
