@@ -23,6 +23,11 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
+# algorithm:
+# keep a map.
+# let curr = target - v
+# if curr in map, return
+# else add num in map
 
 
 def twoSum( nums, target) :
