@@ -24,7 +24,7 @@
 #     -109 <= nums[i] <= 109
 
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longestConsecutive(self, nums) -> int:
         s = set(nums)
         l = 0
         maxL = 0
