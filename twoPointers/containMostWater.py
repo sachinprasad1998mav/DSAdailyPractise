@@ -39,7 +39,7 @@
 
 
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height) -> int:
         i = 0
         j = len(height)-1
         res = 0
